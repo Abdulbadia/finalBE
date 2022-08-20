@@ -44,7 +44,7 @@ namespace EcommerceProject.Controllers
                                Availability = x.Availability,
                                discountPercentage = x.discountPercentage,
                                Category = x.Category.CatName,
-                               Brand = x.Brand.BName
+                               BrandName = x.Brand.BName
 
                            };
             return Ok(products);
@@ -69,7 +69,7 @@ namespace EcommerceProject.Controllers
                 Availability = x.Availability,
                 discountPercentage = x.discountPercentage,
                 Category = x.Category.CatName,
-                Brand = x.Brand.BName
+                BrandName = x.Brand.BName
 
             }).SingleOrDefault(b => b.ID == id);
             if (product == null)
@@ -125,7 +125,7 @@ namespace EcommerceProject.Controllers
         {
             ProductDtoo productDtoo = new ProductDtoo();
 
-            string ImageName = await SaveImage(product.ImageFile);
+             string ImageName = await SaveImage(product.ImageFile);
             if (ModelState.IsValid)
             {
                 Product p = new Product();

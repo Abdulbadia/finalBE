@@ -51,11 +51,11 @@ namespace EcommerceProject.Controllers
             CatsDTO.Name = category.CatName;
             foreach (var product in category.Products)
             {
-                CatsDTO.products.Add(new ProductDTo
+                CatsDTO.products.Add(new ProductDTO()
                 {
                     ID = product.ID,
                     Name = product.Name,
-                    image = product.ImageSrc,
+                    ImageSrc = product.ImageSrc,
                     Description = product.Description,
                     //Brand = product.Brand.BName.ToString(),
                     Price = product.Price,

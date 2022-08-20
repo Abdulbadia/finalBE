@@ -32,11 +32,11 @@ namespace EcommerceProject.models
         [ForeignKey("Brand")]
         public int? BrandID { get; set; }
         //[JsonIgnore]
-        public Brand Brand { get; set; }
+        public virtual Brand Brand { get; set; }
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
         //[JsonIgnore]
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
         [Required]
         public bool Availability { get; set; }
         public float? discountPercentage { get; set; }

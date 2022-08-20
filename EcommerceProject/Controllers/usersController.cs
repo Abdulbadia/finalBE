@@ -34,7 +34,7 @@ namespace EcommerceProject.Controllers
         {
             return await _context.Users.ToListAsync();
         }
-
+       
         // GET: api/users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<user>> Getuser(string id)
@@ -135,7 +135,7 @@ namespace EcommerceProject.Controllers
             savinguser.fullname = inputuser.Name;
             savinguser.phonenumber = inputuser.PhoneNumber;
             savinguser.address = inputuser.Address;
-            savinguser.image = inputuser.Image;
+         //   savinguser.image= inputuser.ImageSrc;
             savinguser.type = "user";
             savinguser.passwordHash = passwordHash;
             savinguser.passwordSalt = passwordSalt;
