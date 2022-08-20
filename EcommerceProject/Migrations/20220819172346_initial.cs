@@ -11,6 +11,9 @@ namespace EcommerceProject.Migrations
                 name: "image",
                 table: "Users");
 
+
+
+
             migrationBuilder.AddColumn<string>(
                 name: "ImageName",
                 table: "Users",
